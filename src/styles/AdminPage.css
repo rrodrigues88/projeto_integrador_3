@@ -1,0 +1,261 @@
+.admin-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.admin-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.admin-form input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.admin-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-form button:hover {
+  background-color: #0056b3;
+}
+
+.admin-product-list {
+  display: grid;
+  gap: 15px;
+}
+
+.admin-product-card {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.admin-product-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.admin-header h2 {
+  margin: 0;
+}
+
+.back-button {
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  background: none;
+  color: #007bff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e6f0ff;
+}
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  padding: 20px 0;
+}
+
+.sidebar-header {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  color: #495057;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-item {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 16px;
+  color: #495057;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #e9ecef;
+}
+
+.menu-item.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 20px;
+}
+
+.admin-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vendas-container {
+  padding: 20px;
+}
+
+.vendas-container h3 {
+  margin-top: 0;
+  color: #495057;
+}
+
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.image-upload-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.image-upload-label:hover {
+  background-color: #0056b3;
+}
+
+.image-preview {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.estoque-container {
+  padding: 20px;
+}
+
+.estoque-container h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #495057;
+}
+
+.estoque-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.estoque-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.estoque-card:hover {
+  transform: translateY(-2px);
+}
+
+.estoque-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.estoque-info {
+  padding: 15px;
+}
+
+.estoque-info h4 {
+  margin: 0 0 10px 0;
+  color: #495057;
+}
+
+.estoque-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.estoque-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.estoque-button:hover {
+  background-color: #0056b3;
+}
+
+.estoque-quantity {
+  font-size: 16px;
+  color: #495057;
+  min-width: 80px;
+  text-align: center;
+}
