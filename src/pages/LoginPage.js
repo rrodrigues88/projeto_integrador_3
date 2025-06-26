@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/LoginPage.css";
 
+
 function LoginPage({ onLoginSuccess, onBack }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +13,7 @@ function LoginPage({ onLoginSuccess, onBack }) {
 
     // Usuários fake
     const users = {
-      "adm@email.com": { password: "a123456", role: "admin" },
+      "admin@email.com": { password: "a123456", role: "admin" },
       "usuario@email.com": { password: "a123456", role: "user" }
     };
 
