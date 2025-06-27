@@ -35,11 +35,19 @@ function AdminPage({ onLogout }) {
     e.preventDefault();
     if (!form.name || !form.price || !form.unit || !form.image) return;
 
+    const price = parseFloat(form.price);
+    const stock = parseInt(form.stock) || 0;
+
+    if (isNaN(price) || price < 0) {
+      alert("O preço não pode ser negativo.");
+      return;
+    }
+
     const newProduct = {
       id: Date.now(),
       ...form,
-      price: parseFloat(form.price),
-      stock: parseInt(form.stock) || 0
+      price,
+      stock
     };
 
     setProducts((prev) => [...prev, newProduct]);
@@ -83,6 +91,7 @@ function AdminPage({ onLogout }) {
                 name="price"
                 type="number"
                 step="0.01"
+                min="0"
                 placeholder="Preço"
                 value={form.price}
                 onChange={handleChange}
@@ -218,4 +227,3 @@ function AdminPage({ onLogout }) {
 }
 
 export default AdminPage;
-
