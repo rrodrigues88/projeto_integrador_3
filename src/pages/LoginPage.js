@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../styles/LoginPage.css";
 
-
 function LoginPage({ onLoginSuccess, onBack }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,15 +10,15 @@ function LoginPage({ onLoginSuccess, onBack }) {
     e.preventDefault();
     setError("");
 
-    // Usuários fake
     const users = {
       "admin@email.com": { password: "a123456", role: "admin" },
-      "usuario@email.com": { password: "a123456", role: "user" }
+      "user@email.com": { password: "a123456", role: "user" }
     };
 
     const user = users[email];
 
     if (user && user.password === password) {
+      localStorage.setItem("userRole", user.role); // salvar no localStorage
       onLoginSuccess(user.role);
     } else {
       setError("Email ou senha inválidos");

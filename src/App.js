@@ -11,23 +11,27 @@ function App() {
   const [userRole, setUserRole] = useState(null);
   const [products, setProducts] = useState([]);
 
+  // Restaura o login e produtos ao carregar o app
   useEffect(() => {
-    const stored = localStorage.getItem("products");
-    if (stored) {
-      setProducts(JSON.parse(stored));
+    const storedProducts = localStorage.getItem("products");
+    if (storedProducts) {
+      setProducts(JSON.parse(storedProducts));
+    }
+
+    const storedRole = localStorage.getItem("userRole");
+    if (storedRole) {
+      setUserRole(storedRole);
+      setScreen(storedRole === "admin" ? "admin" : "home");
     }
   }, []);
 
   const handleLoginSuccess = (role) => {
     setUserRole(role);
-    if (role === "admin") {
-      setScreen("admin");
-    } else {
-      setScreen("home");
-    }
+    setScreen(role === "admin" ? "admin" : "home");
   };
 
   const handleLogout = () => {
+    localStorage.removeItem("userRole"); // limpa localStorage ao sair
     setUserRole(null);
     setScreen("home");
   };
