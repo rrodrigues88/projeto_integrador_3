@@ -1,7 +1,8 @@
 .admin-layout {
-  display: flex;
+  display: inline-flex;
   height: 100vh;
   font-family: Arial, sans-serif;
+  margin-left: -1040px;
 }
 
 .admin-sidebar {
@@ -289,7 +290,7 @@
   padding-left: 10px;
   border-left: 2px solid #ccc;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   margin-top: 10px;
 }
