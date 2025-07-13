@@ -1,27 +1,33 @@
 .products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-direction: row;
   gap: 20px;
   padding: 20px;
 }
 
 .product-card {
-  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #3d3b3b;
   border-radius: 8px;
   padding: 10px;
-  text-align: center;
 }
 
 .product-image {
-  width: 100%;
+  width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 4px;
 }
 
+.product-details {
+  flex: 1;
+}
+
 .product-name {
   font-size: 16px;
-  margin: 10px 0 5px;
+  margin: 0 0 5px;
 }
 
 .product-price {
@@ -46,7 +52,7 @@
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
-  width: 100%;
+  width: 150px;
 }
 
 .buy-button:hover {

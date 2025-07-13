@@ -256,7 +256,14 @@ function AdminPage() {
             </option>
           ))}
         </select>
-        <input name="quantity" type="number" min="1" value={saleForm.quantity} onChange={handleSaleChange} />
+        <input
+          name="quantity"
+          type="number"
+          min="1"
+          value={saleForm.quantity}
+          onChange={handleSaleChange}
+          title="Informe a Quantidade do Produto"
+        />
         <button type="submit">Registrar</button>
       </form>
 
