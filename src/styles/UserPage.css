@@ -1,0 +1,109 @@
+.user-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.user-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.user-table th {
+  background-color: #2d3e50;
+  color: #fff;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.user-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.input-qty {
+  width: 60px;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #2d3e50;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #1a252f;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  color: white;
+  margin-left: 10px;
+}
+
+.btn-danger:hover {
+  background-color: #b52b27;
+}
+
+.btn-logout {
+  background-color: #ff5722;
+  color: white;
+}
+
+.btn-logout:hover {
+  background-color: #e64a19;
+}
+
+.btn-finalize {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.purchase-card {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.purchase-total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #2d3e50;
+}

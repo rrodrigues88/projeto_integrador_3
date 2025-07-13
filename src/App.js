@@ -5,13 +5,13 @@ import Header from "./components/Header";
 import ProductsPage from "./pages/ProductsPage";
 import LoginPage from "./pages/LoginPage";
 import AdminPage from "./pages/AdminPage";
+import UserPage from "./pages/UserPage";
 
 function App() {
   const [screen, setScreen] = useState("home");
   const [userRole, setUserRole] = useState(null);
   const [products, setProducts] = useState([]);
 
-  // Restaura o login e produtos ao carregar o app
   useEffect(() => {
     const storedProducts = localStorage.getItem("products");
     if (storedProducts) {
@@ -21,17 +21,17 @@ function App() {
     const storedRole = localStorage.getItem("userRole");
     if (storedRole) {
       setUserRole(storedRole);
-      setScreen(storedRole === "admin" ? "admin" : "home");
+      setScreen(storedRole === "admin" ? "admin" : "user");
     }
   }, []);
 
   const handleLoginSuccess = (role) => {
     setUserRole(role);
-    setScreen(role === "admin" ? "admin" : "home");
+    setScreen(role === "admin" ? "admin" : "user");
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("userRole"); // limpa localStorage ao sair
+    localStorage.removeItem("userRole");
     setUserRole(null);
     setScreen("home");
   };
@@ -47,9 +47,11 @@ function App() {
       <main>
         {screen === "home" && (
           <ProductsPage
-            onBuyClick={() => {
-              if (userRole) {
-                alert("Compra simulada! Em breve finalizaremos isso.");
+            onBuyClick={(productId) => {
+              if (userRole === "user") {
+                alert("Para adicionar ao carrinho, acesse seu painel de usuário.");
+              } else if (userRole === "admin") {
+                alert("Admin não pode comprar produtos.");
               } else {
                 setScreen("login");
               }
@@ -65,6 +67,9 @@ function App() {
         )}
         {screen === "admin" && userRole === "admin" && (
           <AdminPage onLogout={handleLogout} />
+        )}
+        {screen === "user" && userRole === "user" && (
+          <UserPage products={products} onLogout={handleLogout} />
         )}
       </main>
     </div>

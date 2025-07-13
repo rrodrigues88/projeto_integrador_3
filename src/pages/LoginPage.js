@@ -18,7 +18,7 @@ function LoginPage({ onLoginSuccess, onBack }) {
     const user = users[email];
 
     if (user && user.password === password) {
-      localStorage.setItem("userRole", user.role); // salvar no localStorage
+      localStorage.setItem("userRole", user.role);
       onLoginSuccess(user.role);
     } else {
       setError("Email ou senha inválidos");

@@ -13,7 +13,7 @@ function ProductsPage({ onBuyClick, products }) {
             R$ {price.toFixed(2).replace(".", ",")}{" "}
             <span className="product-unit">por {unit}</span>
           </p>
-          <button className="buy-button" onClick={onBuyClick}>
+          <button className="buy-button" onClick={() => onBuyClick(id)}>
             Comprar
           </button>
         </div>
